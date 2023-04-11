@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <node name="crawler_interface" pkg="koala_crawler_pkg" type="crawler_interface_node" output="screen"/>
+
+  <!--node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" args="/crawler/force_left" /-->
+
+  <node pkg="plotjuggler"   type="plotjuggler" name="plotjuggler_layout" 
+    args="--layout $(find koala_crawler_pkg)/config/force_only.xml" />
+
+</launch>
